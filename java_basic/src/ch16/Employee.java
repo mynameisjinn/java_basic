@@ -28,4 +28,13 @@ public class Employee {
 	public String getDepartment() {
 		return department;
 	}
+	
+	// static 함수
+	public static int getSerialNumber() {
+		// 주의 : static 메서드 안에서 멤버 변수를 사용 할 수 없다 
+//		department = "기획팀";
+		// 멤버 변수는 new 한 이후에 사용할 수 있다
+		// 즉, 멤버 변수는 객체가 생성되어야 사용할 수 있다. 
+		return serialNumber;
+	}
 }

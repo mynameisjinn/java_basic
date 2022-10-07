@@ -4,6 +4,14 @@ public class MainTest2 {
 
 	public static void main(String[] args) {
 
+		// static 변수는 클래스 이름에 접근할 수 있다. 
+		int result = Employee.serialNumber;
+		// static 함수는 클래스 이름으로 접근가능하다 
+		int result2 = Employee.getSerialNumber();
+		
+		System.out.println(result);
+		System.out.println(result2);
+		
 		Employee employeeKim = new Employee("김길동","영업팀");
 		Employee employeeLee = new Employee("이순신","무역팀");
 		Employee employeeHong = new Employee("홍길동","개발팀");
@@ -23,7 +31,14 @@ public class MainTest2 {
 		
 		// static 변수 호출하는 방법 
 		// 클래스 이름으로 접근 가능
-		System.out.println(Employee.serialNumber);
+//		System.out.println(Employee.serialNumber);
+	
+		int total = add(10,100);
+//		System.out.println(total);
+	} // end of main
+	
+	public static int add(int n1, int n2) {
+		return n1+n2;
 	}
-
+	
 }

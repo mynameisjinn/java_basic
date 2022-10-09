@@ -14,11 +14,12 @@ public class Employee {
 		
 		this.employeeId = serialNumber;
 		serialNumber++;
-		this.employeeName = employeeName;
+		this.employeeName = employeeName; 
 		this.department = department;
 		
 	}
 	
+	// 신원 조회만 할 경우 ( read-only )
 	public int getEmployeeId() {
 		return employeeId;
 	}

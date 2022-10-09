@@ -23,17 +23,34 @@ public class Zealot {
 
 	// 공격을 받습니다
 	public void beAttacked(int power) {
-		this.hp -= power;
+		if (this.hp <= 0) {
+			System.out.println(this.name + "은 이미 사망하였습니다.");
+		} else {
+			this.hp -= power;
+		}
 	}
 
 	// 질럿이 마린을 공격
 	public void attackMarine(Marine marine) {
-		System.out.println(this.name+" 이 마린을 공격합니다. ");
+		System.out.println(this.name+" 이 "+marine.getName()+" 을 공격합니다. ");
 		marine.beAttacked(this.power);
 	}
 	// 질럿이 저글링을 공격
 	public void attackZergling(Zergling zergling) {
-		System.out.println(this.name+" 이 저글링을 공격합니다.");
+		System.out.println(this.name+" 이 "+zergling.getName()+" 을 공격합니다.");
         zergling.beAttacked(this.power);	
 	}
+	
+	// getter - hp,power,name
+	// 단축키 : Alt+shift+s - Generate Getters and Setters..
+	public String getName() {
+		return name;
+	}
+	public int getPower() {
+		return power;
+	}
+	public int getHp() {
+		return hp;
+	}
+	
 }
